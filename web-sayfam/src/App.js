@@ -1,5 +1,5 @@
-import React from 'react'
-import useNightMode from './hooks/useNightMode'
+import React, { useEffect } from 'react'
+import useTheme from './hooks/useDarkMode'
 import useLanguageEnglish from './hooks/useLanguageEnglish'
 
 import Skills from './components/Skills'
@@ -11,19 +11,38 @@ import Profile from './components/Profile'
 import { Footer } from './components/Footer'
 
 function App() {
-  const [darkMode, setDarkMode] = useNightMode(false)
+  const [theme, setTheme] = useTheme('light')
   const [english, setEnglish] = useLanguageEnglish(true)
 
+  useEffect(() => {
+    if (
+      localStorage.theme === 'dark' ||
+      (!('theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [])
+
+  const darkModeHandler = () => {
+    setTheme((initialtheme) => (initialtheme === 'light' ? 'dark' : 'light'))
+    if (theme === 'dark') {
+      document.documentElement.classList.remove('dark')
+      localStorage.setItem('mode', 'light')
+    } else {
+      document.documentElement.classList.add('dark')
+      localStorage.setItem('mode', 'dark')
+    }
+  }
   const languageHandler = () => {
     setEnglish(!english)
-  }
-  const darkModeHandler = () => {
-    setDarkMode(!darkMode)
   }
 
   return (
     <div className="flex flex-col bg-white box-border w-screen">
-      <div className=" flex flex-col items-center bg-[linear-gradient(90deg,_#4832d3_67rem,#cbf281_33rem)] h-[40rem] ">
+      <div className=" flex flex-col items-center bg-[linear-gradient(90deg,_#4832d3_67rem,#cbf281_33rem)] dark:bg-[linear-gradient(90deg,_#171043_67rem,#1A210B_33rem)] h-[40rem] ">
         <div className="w-2/3 max-w-[960px] min-w-[660px]">
           {/* <Header english={english} darkMode={darkMode}></Header> */}
           <div className="text-xs flex flex-row items-center justify-end pt-[2rem] relative">
@@ -35,17 +54,17 @@ function App() {
                 className=" font-inter font-bold text-base leading-5 tracking-wider  text-white "
               >
                 {english && (
-                  <span>
-                    <span className="font-inter font-bold text-base leading-5 tracking-wider  text-lime-300">
+                  <span className="dark:text-[#777777]">
+                    <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
                       TÜRKÇE
                     </span>
                     'YE GEÇ
                   </span>
                 )}
                 {!english && (
-                  <span>
+                  <span className="dark:text-[#777777]">
                     {'SET TO '}
-                    <span className="font-inter font-bold text-base leading-5 tracking-wider  text-lime-300">
+                    <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
                       ENGLISH
                     </span>
                   </span>
@@ -57,21 +76,21 @@ function App() {
               id="dark-mode__switch"
               onClick={darkModeHandler}
             />
-            <label for="dark-mode__switch"> </label>
-            <p className="font-inter font-bold text-base leading-4 tracking-wider pl-1 min-w-min text-[#4731D3]">
+            <label htmlFor="dark-mode__switch"> </label>
+            <p className="font-inter font-bold text-base leading-4 tracking-wider pl-1 min-w-min text-[#4731D3] dark:text-[#D9D9D9]">
               {!english ? 'DARK MODE' : 'GECE MODU'}
             </p>
           </div>
           {/* <Hero english={english} darkMode={darkMode}></Hero> */}
           <div className="flex flex-col w-full justify-center items-start pt-8">
             <div className="flex justify-start items-start">
-              <h2 className="text-lime-300 font-bold text-2xl font-inter pb-28">
+              <h2 className="text-[#CBF281] font-bold text-2xl font-inter pb-28">
                 Sertaç Kocagil
               </h2>
             </div>{' '}
             <div className=" w-full flex  items-center pb-5">
               <div className="max-w-[600px] min-w-[500px] flex flex-col gap-y-9">
-                <h1 className="text-5xl text-[#CBF281] font-bold leading-[110%] text-left">
+                <h1 className="text-5xl text-[#CBF281]  font-bold leading-[110%] text-left">
                   {!english
                     ? 'I am a Frontend Developer...'
                     : 'Ben bir Frontend Geliştiricisiyim...'}
@@ -120,14 +139,14 @@ function App() {
             {/* hero sonu */}
           </div>
           <div className="w-full pt-20  flex flex-col self-center justify-center items-center">
-            <Skills english={english} darkMode={darkMode}></Skills>
+            <Skills english={english}></Skills>
           </div>
         </div>
-        <div className="flex w-screen bg-[#3730A3] flex-col justify-center items-center">
-          <Profile english={english} darkMode={darkMode}></Profile>
+        <div className="flex w-screen bg-[#3730A3] dark:bg-[#171043] flex-col justify-center items-center">
+          <Profile english={english}></Profile>
         </div>
         <div className="w-full bg-[#F9F9F9] lg:relative lg:min-h-max lg:pt-[84px] lg:pb-24">
-          <Footer english={english} darkMode={darkMode}></Footer>
+          <Footer english={english}></Footer>
         </div>
       </div>
     </div>
