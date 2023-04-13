@@ -1,0 +1,223 @@
+label {
+  cursor: pointer;
+  width: 55px;
+  height: 24px;
+  background: var(--light);
+  border-radius: 24px;
+  position: relative;
+}
+
+label:active:after {
+  width: 20px;
+}
+
+label:after {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 35px;
+  width: 15px;
+  height: 15px;
+  background: var(--yellow);
+  border-radius: 100%;
+  transition: 0.3s;
+}
+
+input[type='checkbox'] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: var(--dark);
+}
+
+input:checked + label:after {
+  left: calc(100% - 32px);
+  transform: translateX(-110%);
+  background: var(--dark);
+  box-shadow: inset 4px 0px 0px 0px yellow;
+}
+
+/* colors variables */
+:root {
+  --light: #8f88ff;
+  --yellow: yellow;
+  --dark: #28292c;
+}
+
+/* switch */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* üstü switch  */
+.App {
+  position: relative;
+  width: 100vw;
+  height: 3286px;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+
+.main-container {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(71, 49, 211);
+}
+
+.header-container {
+  /* position: absolute; */
+  width: 66vw;
+  height: 671px;
+  z-index: 0;
+
+  padding: 0;
+}
+.header-container__yellow-panel {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: #cbf281;
+  z-index: -1;
+  height: 671px;
+  width: 33.3%;
+}
+
+.hero-container {
+  height: 47%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 33.3%;
+}
+
+.header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  padding-top: 0;
+}
+
+.header__settings {
+  display: flex;
+  flex-flow: row;
+  height: 4rem;
+  /* justify-content: flex-end; */
+  align-items: center;
+  font-size: 0.7rem;
+}
+
+.settings__turkish {
+  display: flex;
+  width: 66.7%;
+  justify-content: flex-end;
+  padding-right: 2%;
+}
+.turkish___text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  justify-content: flex-end;
+}
+
+.dark-mode___text {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  padding-left: 1%;
+  min-width: 8rem;
+  color: #4731d3;
+}
+
+.hero-content-container {
+  /* border: #ffffff solid 2px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0px;
+  gap: 5rem;
+
+  /* background-color: rgb(71, 49, 211); */
+}
+
+.hero-content___left {
+  /* hero-left */
+
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 2rem;
+
+  width: 528.88px;
+  height: 375.89px;
+
+  /* Inside auto layout */
+}
+
+.hero-content___left h1 {
+  /* I am a Frontend Developer... */
+
+  width: 528.88px;
+  height: 118px;
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 110%;
+  /* or 59px */
+
+  color: #cbf281;
+
+  /* Inside auto layout */
+}
+
+.hero-content___left p {
+  /* width: 528.88px;
+  height: 58px; */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+
+  color: #ffffff;
+
+  /* Inside auto layout */
+}
+
+/* .hero-content__photo {
+  /* hero-right */
+
+/* width: 350px;
+  height: 375.89px; */
+
+/* background: url(./assets/foto.svg);
+
+  box-shadow: 0px 8px 28px -6px rgba(24, 39, 75, 0.12),
+    0px 18px 88px -4px rgba(24, 39, 75, 0.14);
+  border-radius: 18px; */
+
+/* Inside auto layout */
