@@ -33,14 +33,13 @@
   .dark-mode::after {
     content: '';
     position: absolute;
-    width: 317%;
+    width: calc(50vw - 306px);
     background: #cbf281;
     @apply dark:bg-[#1A210B];
-
     height: 1155px;
     display: block;
     z-index: -1;
-    left: 2px;
+    left: 1px;
   }
 
   /* switch */

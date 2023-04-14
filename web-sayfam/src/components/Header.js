@@ -5,11 +5,11 @@ const Header = () => {
   const { english, languageHandler, darkModeHandler, theme } =
     useContext(myContext)
   return (
-    <div className="items-center justify-end text-xs flex flex-row pt-[2rem]">
-      <div className="flex justify-end flex-row ps-3 pe-6 ">
+    <div className="items-center justify-end text-xs flex flex-row pt-8">
+      <div className="flex justify-end flex-row ps-3 pe-6">
         <p
           onClick={languageHandler}
-          className=" font-inter font-bold text-base leading-5 tracking-wider  text-white "
+          className=" font-inter font-bold text-base leading-5 tracking-wider text-white "
         >
           {english && (
             <span className="dark:text-[#777777]">
@@ -29,7 +29,7 @@ const Header = () => {
           )}
         </p>
       </div>
-      <div className="dark-mode flex items-center ps-5">
+      <div className="dark-mode flex items-center ps-4">
         <input
           defaultChecked={theme === 'dark' ? true : false}
           type="checkbox"
@@ -37,7 +37,7 @@ const Header = () => {
           onClick={darkModeHandler}
         />
         <label htmlFor="dark-mode__switch"> </label>
-        <p className="font-inter font-bold text-base leading-4 tracking-wider pl-1 min-w-min text-[#4731D3] dark:text-[#D9D9D9]">
+        <p className="font-inter font-bold text-base leading-4 tracking-wider pl-1 text-[#4731D3] dark:text-[#D9D9D9]">
           {!english ? 'DARK MODE' : 'GECE MODU'}
         </p>
       </div>

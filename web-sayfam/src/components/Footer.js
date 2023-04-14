@@ -9,7 +9,7 @@ import { MdAlternateEmail } from 'react-icons/md'
 const Footer = () => {
   const { english } = useContext(myContext)
   return (
-    <div className="px-5 pt-16 pb-16 flex flex-col items-center text-center gap-y-6 lg:p-0 lg:w-[500px] lg:mx-auto">
+    <div className="px-5 pt-16 pb-16 flex flex-col items-center text-center gap-y-6 lg:p-0 lg:mx-auto">
       <h4 className="text-[48px] text-[#4731D3] dark:text-[#8F88FF] font-bold">
         {english ? 'Send me a message!' : 'Bana mesaj gönder!'}
       </h4>
