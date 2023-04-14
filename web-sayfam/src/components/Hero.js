@@ -1,5 +1,7 @@
 import React, { useContext } from 'react'
 import { myContext } from '../context/myContext'
+import { SiGithub } from 'react-icons/si'
+import { FaLinkedinIn } from 'react-icons/fa'
 
 import foto from '../assets/foto.svg'
 
@@ -35,23 +37,21 @@ const Hero = () => {
             <a
               href="https://github.com/adra3n"
               target="_blank"
-              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] rounded-md cursor-pointer hover:text-[#0a0558]"
+              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] dark:bg-[#252128] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
             >
-              <img
-                className="w-[2rem]"
-                src={require('../assets/logo-github.png')}
-              />
+              <SiGithub size={30} className="w-[2rem]" />
               <p className="text-lg font-medium">GitHub</p>
             </a>
             <a
               href="https://www.linkedin.com/in/serta%C3%A7-kocagil-904290272/"
               target="_blank"
-              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] rounded-md cursor-pointer hover:text-[#0a0558]"
+              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] dark:bg-[#252128] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
             >
-              <img
+              {/* <img
                 className="w-[2rem]"
                 src={require('../assets/logo-li.png')}
-              />
+              /> */}
+              <FaLinkedinIn size={30} className="w-[2rem]" />
               <p className="text-lg font-medium">LinkedIn</p>
             </a>
           </div>
