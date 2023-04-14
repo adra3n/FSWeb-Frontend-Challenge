@@ -16,7 +16,7 @@ import './App.css'
 
 function App() {
   const [theme, setTheme] = useState(
-    !localStorage.mode ? localStorage.mode : 'light'
+    !localStorage.mode ? 'light' : localStorage.mode
   )
   const [english, setEnglish] = useLanguageEnglish(true)
 
