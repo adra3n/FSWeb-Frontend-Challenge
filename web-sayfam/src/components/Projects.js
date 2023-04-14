@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import data from '../data/data'
+import { myContext } from '../context/myContext'
 
-const Projects = ({ english, data }) => {
-  const projects = data.projects.map((e, idx) => {
+const Projects = () => {
+  const { english, myData } = useContext(myContext)
+  const projects = myData.projects.map((e, idx) => {
     const skills = e.skills.map((skill, index) => (
       <span
         key={index}
-        className="text-lg rounded-3xl px-5 bg-[#4731D3] dark:bg-[#8173DA] text-white py-2 "
+        className="text-lg rounded-3xl px-5 flex justify-center bg-[#4731D3] dark:bg-[#8173DA] text-white py-2 "
       >
         {skill}
       </span>
@@ -26,7 +28,7 @@ const Projects = ({ english, data }) => {
             {e.name}
           </h4>
           <p className="text-[16px] text-[#383838] dark:text-white leading-tight">
-            {e.text}
+            {english ? e.text.en : e.text.tr}
           </p>
           <div className="flex flex-wrap gap-[6px] ">{skills}</div>
           <div className="flex gap-x-9">
@@ -53,9 +55,9 @@ const Projects = ({ english, data }) => {
   return (
     <section
       id="projects"
-      className="w-full bg-[#CBF281]  min-h-max pt-[84px] pb-24 dark:bg-[#1A210B]"
+      className="w-full bg-[#CBF281]  min-h-max  pt-24 pb-24 dark:bg-[#1A210B]"
     >
-      <div className=" px-5 pt-16 pb-16 flex flex-col gap-y-7 p-0 w-[960px] lg:mx-auto">
+      <div className=" px-5  flex flex-col gap-y-7 p-0 w-[960px] lg:mx-auto">
         <h2 className="text-[48px] text-[#4731D3] dark:text-[#CBF281]  font-bold">
           {' '}
           {english ? 'Projects' : 'Projeler'}

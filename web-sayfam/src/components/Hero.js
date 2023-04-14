@@ -1,16 +1,18 @@
-import React from 'react'
-import foto from '../assets/foto.svg'
-import './Hero.css'
+import React, { useContext } from 'react'
+import { myContext } from '../context/myContext'
 
-const Hero = ({ english }) => {
+import foto from '../assets/foto.svg'
+
+const Hero = () => {
+  const { english } = useContext(myContext)
   return (
-    <section className="flex flex-col w-full justify-center items-start pt-8">
+    <section className="flex flex-col w-full justify-center items-start pt-8 pb-24">
       <div className="flex justify-start items-start">
-        <h2 className="text-[#CBF281] font-bold text-2xl font-inter pb-28">
+        <h2 className="text-[#CBF281] font-bold text-2xl font-inter pb-16">
           Sertaç Kocagil
         </h2>
       </div>
-      <div className=" w-full flex  items-center pb-5">
+      <div className=" w-full flex  items-end">
         <div className="flex flex-col gap-y-9">
           <h1 className="text-5xl text-[#CBF281]  font-bold leading-[110%] text-left">
             {english

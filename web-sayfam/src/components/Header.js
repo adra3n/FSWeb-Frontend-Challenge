@@ -1,10 +1,12 @@
-import React from 'react'
-import './Header.css'
+import React, { useContext } from 'react'
+import { myContext } from '../context/myContext'
 
-const Header = ({ english, languageHandler, darkModeHandler, theme }) => {
+const Header = () => {
+  const { english, languageHandler, darkModeHandler, theme } =
+    useContext(myContext)
   return (
     <div className="items-center justify-end text-xs flex flex-row pt-[2rem]">
-      <div className="flex justify-end flex-row ps-5 pe-4 ">
+      <div className="flex justify-end flex-row ps-3 pe-6 ">
         <p
           onClick={languageHandler}
           className=" font-inter font-bold text-base leading-5 tracking-wider  text-white "

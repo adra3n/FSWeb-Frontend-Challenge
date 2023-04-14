@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { myContext } from '../context/myContext'
+
 import { CgInstagram } from 'react-icons/cg'
 import { FiTwitter } from 'react-icons/fi'
 import { DiCodepen } from 'react-icons/di'
 import { MdAlternateEmail } from 'react-icons/md'
-export const Footer = ({ english }) => {
+
+const Footer = () => {
+  const { english } = useContext(myContext)
   return (
     <div className="px-5 pt-16 pb-16 flex flex-col items-center text-center gap-y-6 lg:p-0 lg:w-[500px] lg:mx-auto">
       <h4 className="text-[48px] text-[#4731D3] dark:text-[#8F88FF] font-bold">
@@ -41,3 +45,5 @@ export const Footer = ({ english }) => {
     </div>
   )
 }
+
+export default Footer
