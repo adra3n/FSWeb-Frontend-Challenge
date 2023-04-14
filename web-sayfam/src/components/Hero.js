@@ -56,8 +56,8 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div className="p-0 min-w-fit object-cover">
-          <img src={foto} className=" object-cover shadow-md rounded-3xl" />
+        <div className="p-0 min-w-fit object-cover relative">
+          <img src={foto} className=" object-cover shadow-md rounded-3xl " />
         </div>
       </div>
     </section>

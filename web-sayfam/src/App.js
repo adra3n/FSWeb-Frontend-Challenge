@@ -70,13 +70,16 @@ function App() {
       value={{ english, languageHandler, darkModeHandler, theme, myData }}
     >
       <div className="flex flex-col bg-[#F9F9F9] dark:bg-[#252128] box-border items-center w-screen">
-        <div className=" flex flex-col items-center bg-[linear-gradient(90deg,_#4832d3_71%,#cbf281_29%)] dark:bg-[linear-gradient(90deg,_#171043_70%,#1A210B_30%)] h-[42rem] ">
+        {/* <div className=" flex flex-col items-center bg-[linear-gradient(90deg,_#4832d3_71%,#cbf281_29%)] dark:bg-[linear-gradient(90deg,_#171043_70%,#1A210B_30%)] h-[42rem] "> */}
+        <div className=" flex flex-col items-center bg-[#3730A3] dark:bg-[#171043]  h-[42rem] ">
           <section className="w-[960px] min-w-[800px] items-center">
             <Header></Header>
           </section>
+
           <section className="max-w-[960px] min-w-[800px]">
             <Hero></Hero>
           </section>
+
           <section className="w-screen pt-20 items-center flex flex-col dark:bg-[#252128] bg-[#F9F9F9]">
             <Skills></Skills>
           </section>
@@ -84,11 +87,12 @@ function App() {
           <section className="flex w-screen bg-[#3730A3] dark:bg-[#171043] flex-col justify-center items-center">
             <Profile></Profile>
           </section>
+
           <section className="flex w-screen bg-[#3730A3] dark:bg-[#171043] flex-col justify-center items-center">
             <Projects></Projects>
           </section>
 
-          <section className="flex w-full bg-[#F9F9F9] dark:bg-[#171043] min-h-max pt-[84px] pb-24">
+          <section className="flex justify-center w-full bg-[#F9F9F9] dark:bg-[#171043] min-h-max pt-[84px] pb-24">
             <Footer></Footer>
           </section>
         </div>

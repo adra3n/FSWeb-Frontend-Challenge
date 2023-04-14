@@ -49,7 +49,7 @@ const Profile = () => {
           </div>
         </div>
         <div className="w-full">
-          <img className="  object-cover" src={profilePhoto}></img>
+          <img className="  object-cover rounded-lg" src={profilePhoto}></img>
         </div>
 
         <div className="flex flex-col gap-y-6  w-[300px]">

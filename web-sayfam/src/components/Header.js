@@ -29,7 +29,7 @@ const Header = () => {
           )}
         </p>
       </div>
-      <div className="flex items-center ps-5">
+      <div className="dark-mode flex items-center ps-5">
         <input
           defaultChecked={theme === 'dark' ? true : false}
           type="checkbox"

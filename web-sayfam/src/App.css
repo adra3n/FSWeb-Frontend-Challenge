@@ -10,15 +10,37 @@
     justify-content: center;
     align-items: center;
     background: #f9f9f9;
+    padding: 0;
+    margin: 0;
   }
 
   .App {
     position: relative;
-    width: 100vw;
+    max-width: 100vw;
     height: 3286px;
     background: #f9f9f9;
-
+    overflow: hidden;
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+
+  .dark-mode {
+    position: relative;
+    z-index: 0;
+  }
+
+  .dark-mode::after {
+    content: '';
+    position: absolute;
+    width: 317%;
+    background: #cbf281;
+    @apply dark:bg-[#1A210B];
+
+    height: 1155px;
+    display: block;
+    z-index: -1;
+    left: 2px;
   }
 
   /* switch */
