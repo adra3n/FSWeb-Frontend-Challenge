@@ -1,35 +1,43 @@
 import React from 'react'
 import './Header.css'
 
-const Header = () => {
+const Header = ({ english, languageHandler, darkModeHandler, theme }) => {
   return (
-    <div className="text-xs flex flex-row items-center justify-end pt-[2rem]">
-      <div className="flex justify-end flex-row ps-[3vw] pe-[3vw]">
-        <a
-          href="/"
+    <div className="items-center justify-end text-xs flex flex-row pt-[2rem]">
+      <div className="flex justify-end flex-row ps-5 pe-4 ">
+        <p
+          onClick={languageHandler}
           className=" font-inter font-bold text-base leading-5 tracking-wider  text-white "
         >
-          <span className="font-inter font-bold text-base leading-5 tracking-wider  text-lime-300">
-            TÜRKÇE
-          </span>
-          'YE GEÇ
-        </a>
+          {english && (
+            <span className="dark:text-[#777777]">
+              <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
+                TÜRKÇE
+              </span>
+              'YE GEÇ
+            </span>
+          )}
+          {!english && (
+            <span className="dark:text-[#777777]">
+              {'SET TO '}
+              <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
+                ENGLISH
+              </span>
+            </span>
+          )}
+        </p>
       </div>
-
-      <div className="flex flex-row ps-5 pe-9">
-        <label
-          htmlFor="toggleDark"
-          className="flex cursor-pointer select-none items-center"
-        >
-          <div className="relative">
-            <input type="checkbox" id="toggleDark" className="sr-only" />
-            <div className="box bg-[#4731D3] block h-7 w-14 rounded-full"></div>
-            <div className="dot absolute left-1 top-1 flex h-5 w-5 items-center justify-center rounded-full bg-white transition"></div>
-          </div>
-          <p className="font-inter font-bold text-lg leading-4 tracking-wider pl-1 min-w-min text-purple-700">
-            DARK MODE
-          </p>
-        </label>
+      <div className="flex items-center ps-5">
+        <input
+          defaultChecked={theme === 'dark' ? true : false}
+          type="checkbox"
+          id="dark-mode__switch"
+          onClick={darkModeHandler}
+        />
+        <label htmlFor="dark-mode__switch"> </label>
+        <p className="font-inter font-bold text-base leading-4 tracking-wider pl-1 min-w-min text-[#4731D3] dark:text-[#D9D9D9]">
+          {!english ? 'DARK MODE' : 'GECE MODU'}
+        </p>
       </div>
     </div>
   )

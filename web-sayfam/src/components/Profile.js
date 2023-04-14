@@ -1,7 +1,7 @@
 import React from 'react'
 import profilePhoto from '../assets/profile-1.png'
 
-const Profile = ({ english, darkMode }) => {
+const Profile = ({ english }) => {
   return (
     <div className=" flex flex-col w-[960px] py-12 px-0">
       <h2 className="text-5xl text-[#CBF281] font-bold pb-7">
