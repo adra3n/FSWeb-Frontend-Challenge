@@ -14,7 +14,7 @@ const Skills = () => {
             className="flex flex-row items-center justify-start pb-6 w-1/2 mx-auto "
             key={i}
           >
-            <img className="pe-4" src={e.logo} />
+            <img className="pe-4 " src={e.logo} />
             <h4 className="pe-16 font-lg first-letter:text-start text-base md:text-lg leading-6 md:leading-7 uppercase text-gray-500 dark:text-white font-inter">
               {e.name}
             </h4>

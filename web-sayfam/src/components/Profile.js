@@ -15,8 +15,8 @@ const Profile = () => {
           <h3 className="text-3xl text-white font-normal w-[300px] text-left pb-8">
             {!english ? 'Temel Bilgiler' : 'Basic Information'}
           </h3>
-          <div className="flex flex-col justify-between text-base leading-[1.5]">
-            <div className="flex justify-between">
+          <div className="flex flex-col justify-between text-base leading-[1.5] gap-1 items-start">
+            <div className="flex justify-between items-center">
               <p className="w-1/3 font-semibold text-[#CBF281] ">
                 {!english ? 'Doğum Tarihi' : 'Basic Information'}
               </p>
@@ -24,13 +24,13 @@ const Profile = () => {
                 {!english ? '10.05.1986' : '05.10.1986'}
               </p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="w-1/3 font-semibold text-[#CBF281] ">
                 {!english ? 'İkamet Şehri' : 'City of Residence'}
               </p>
               <p className="w-48 text-white">İstanbul</p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="w-1/3 font-semibold text-[#CBF281]">
                 {!english ? 'Eğitim Durumu' : 'Education Info'}
               </p>
@@ -40,7 +40,7 @@ const Profile = () => {
                   : 'Ege University - Astronomy and Space Sciences'}
               </p>
             </div>
-            <div className="flex justify-between">
+            <div className="flex justify-between items-center">
               <p className="w-1/3 font-semibold text-[#CBF281] ">
                 {!english ? 'Tercih Ettiği Rol' : 'Preferred Role'}
               </p>

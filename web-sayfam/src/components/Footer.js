@@ -21,25 +21,37 @@ const Footer = () => {
       <div className="flex flex-col gap-y-4">
         <a
           href="mailto:sertackocagil@gmail.com"
-          className="text-[20px] text-[#4731D3] dark:text-[#8F88FF] font-medium underline cursor-pointer "
+          className="text-xl text-[#4731D3] dark:text-[#8F88FF] hover:text-[#8F88FF] dark:hover:text-lime-400 font-medium underline cursor-pointer "
         >
           sertackocagil@gmail.com
         </a>
       </div>
       <div className="flex gap-x-6 text-[#4731D3] dark:text-[#8F88FF] ">
         <a href="https://twitter.com/" target="_blank">
-          <FiTwitter className="cursor-pointer" size={35} />
+          <FiTwitter
+            className="cursor-pointer dark:hover:text-lime-400 hover:text-[#8F88FF]"
+            size={35}
+          />
         </a>
 
         <a href="https://codepen.io/adra3n" target="_blank">
-          <DiCodepen className="cursor-pointer" size={35} />
+          <DiCodepen
+            className="cursor-pointer dark:hover:text-lime-400 hover:text-[#8F88FF]"
+            size={35}
+          />
         </a>
         <a href="mailto:sertackocagil@gmail.com">
-          <MdAlternateEmail className="cursor-pointer " size={35} />
+          <MdAlternateEmail
+            className="cursor-pointer dark:hover:text-lime-400 hover:text-[#8F88FF]"
+            size={35}
+          />
         </a>
 
         <a href="https://instagram.com/" target="_blank">
-          <CgInstagram className="cursor-pointer" size={35} />
+          <CgInstagram
+            className="cursor-pointer dark:hover:text-lime-400 hover:text-[#8F88FF]"
+            size={35}
+          />
         </a>
       </div>
     </div>

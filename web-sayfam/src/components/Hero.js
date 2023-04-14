@@ -37,7 +37,7 @@ const Hero = () => {
             <a
               href="https://github.com/adra3n"
               target="_blank"
-              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] dark:bg-[#252128] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
+              className="py-3 px-3 flex items-center gap-x-[10px] bg-white hover:bg-[#CBF281] text-[#3730A3] dark:bg-[#252128] dark:hover:bg-[#CBF281] dark:hover:text-[#3730A3] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
             >
               <SiGithub size={30} className="w-[2rem]" />
               <p className="text-lg font-medium">GitHub</p>
@@ -45,7 +45,7 @@ const Hero = () => {
             <a
               href="https://www.linkedin.com/in/serta%C3%A7-kocagil-904290272/"
               target="_blank"
-              className="py-3 px-3 flex items-center gap-x-[10px] bg-white text-[#3730A3] dark:bg-[#252128] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
+              className="py-3 px-3 flex items-center gap-x-[10px] bg-white hover:bg-[#CBF281] text-[#3730A3] dark:bg-[#252128] dark:hover:bg-[#CBF281] dark:hover:text-[#3730A3] dark:text-[#FFFFFF] rounded-md cursor-pointer hover:text-[#0a0558]"
             >
               {/* <img
                 className="w-[2rem]"

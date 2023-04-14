@@ -12,6 +12,7 @@
     background: #f9f9f9;
     padding: 0;
     margin: 0;
+    transition: 0.3s;
   }
 
   .App {
@@ -33,8 +34,11 @@
   .dark-mode::after {
     content: '';
     position: absolute;
-    width: calc(50vw - 306px);
+    /* width: calc(50vw - 305px); */
+    width: calc(50vw - 305px);
     background: #cbf281;
+    /* background-image: linear-gradient(to right, rgba(255, 0, 0, 0), #cbf281); */
+    /* @apply dark:bg-[linear-gradient(90deg,_#171043_70%,#1A210B_30%)]; */
     @apply dark:bg-[#1A210B];
     height: 1155px;
     display: block;

@@ -13,7 +13,7 @@ const Header = () => {
         >
           {english && (
             <span className="dark:text-[#777777]">
-              <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
+              <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] hover:text-[#BAB2E7] dark:hover:text-white  dark:text-[#BAB2E7]">
                 TÜRKÇE
               </span>
               'YE GEÇ
@@ -22,7 +22,7 @@ const Header = () => {
           {!english && (
             <span className="dark:text-[#777777]">
               {'SET TO '}
-              <span className="font-inter font-bold text-base leading-5 tracking-wider  text-[#CBF281] dark:text-[#BAB2E7]">
+              <span className="font-inter font-bold text-base leading-5 tracking-wider text-[#CBF281] hover:text-[#BAB2E7] dark:hover:text-white  dark:text-[#BAB2E7]">
                 ENGLISH
               </span>
             </span>

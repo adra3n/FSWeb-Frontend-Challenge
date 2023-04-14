@@ -15,7 +15,9 @@ import { myContext } from './context/myContext'
 import './App.css'
 
 function App() {
-  const [theme, setTheme] = useState(localStorage.mode)
+  const [theme, setTheme] = useState(
+    !localStorage.mode ? localStorage.mode : 'light'
+  )
   const [english, setEnglish] = useLanguageEnglish(true)
 
   const [myData, setMyData] = useState(data)
